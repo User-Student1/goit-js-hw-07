@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  margin: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: #212121;
+  line-height: 1.5;
+  transition: background-color 0.3s ease;
+}
+ 
+/* ===== BACK LINK ===== */
+body > p {
+  margin-bottom: 16px;
+}
+ 
+body > p a {
+  color: #4a7bf7;
+  text-decoration: none;
+  font-size: 14px;
+}
+ 
+body > p a:hover {
+  text-decoration: underline;
+}
+ 
+/* ===== TASK 1 – LIST ===== */
+/* ИЗМЕНЕНО: добавлены height: 888px, position: relative */
+#categories {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 24px;
+  position: relative;
+  width: 440px;
+  height: 888px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+ 
+#categories .item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 16px;
+  width: 392px;
+  background: #f6f6fe;
+  border-radius: 8px;
+}
+ 
+/* ИЗМЕНЕНО: фиксированные высоты для каждого .item */
+#categories .item:nth-child(1) { height: 264px; }
+#categories .item:nth-child(2) { height: 216px; }
+#categories .item:nth-child(3) { height: 312px; }
+ 
+#categories .item h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin: 0;
+}
+ 
+#categories .item .items-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  width: 360px;
+}
+ 
+#categories .item .items-list li {
+  box-sizing: border-box;
+  width: 360px;
+  height: 40px;
+  padding: 8px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  border: 1px solid #808080;
+  border-radius: 4px;
+}
+ 
+/* ===== TASK 2 – GALLERY ===== */
+/* ИЗМЕНЕНО: добавлен внешний контейнер страницы */
+.gallery-page {
+  position: relative;
+  width: 1440px;
+  height: 848px;
+  background: #ffffff;
+}
+ 
+/* ИЗМЕНЕНО: добавлены position: absolute, left: 156px, top: 100px */
+.gallery {
+  list-style: none;
+  position: absolute;
+  left: 156px;
+  top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+  padding: 0;
+  width: 1128px;
+}
+ 
+.gallery li {
+  width: 360px;
+  height: 300px;
+  border-radius: 0;
+  overflow: hidden;
+}
+ 
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+ 
+/* ===== TASK 3 – TEXT FIELD ===== */
+/* ИЗМЕНЕНО: добавлен внешний контейнер */
+.text-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 16px;
+  position: relative;
+  width: 408px;
+  height: 136px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+ 
+/* ИЗМЕНЕНО: убран margin-bottom (теперь gap контейнера управляет отступом) */
+#name-input {
+  box-sizing: border-box;
+  width: 360px;
+  height: 40px;
+  padding: 8px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+ 
+#name-input:focus {
+  border-color: #4e75ff;
+}
+ 
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin: 0;
+}
+ 
+/* ===== TASK 4 – LOGIN FORM ===== */
+/* ИЗМЕНЕНО: добавлены height: 256px, position: relative */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 16px;
+  position: relative;
+  width: 408px;
+  height: 256px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+ 
+/* ИЗМЕНЕНО: добавлена обёртка .fields для двух label */
+.login-form .fields {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  width: 360px;
+  height: 152px;
+}
+ 
+.login-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  width: 360px;
+}
+ 
+.login-form input {
+  box-sizing: border-box;
+  width: 360px;
+  height: 40px;
+  padding: 8px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+ 
+.login-form input:hover {
+  border-color: #000000;
+}
+ 
+.login-form input:focus {
+  border-color: #4e75ff;
+}
+ 
+.login-form button[type='submit'] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 10px;
+  width: 86px;
+  height: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  background-color: #4e75ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+ 
+.login-form button[type='submit']:hover {
+  background-color: #6c8cff;
+}
+ 
+/* ===== TASK 5 – WIDGET ===== */
+/* ИЗМЕНЕНО: gap 16px → 10px, убран justify-content: center */
+.widget {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 100px 88px;
+  background: #ffffff;
+  border-radius: 8px;
+  width: 345px;
+  height: 280px;
+}
+ 
+/* ИЗМЕНЕНО: добавлена обёртка .widget-inner */
+.widget-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  width: 169px;
+  height: 80px;
+}
+ 
+.widget p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+ 
+.color {
+  font-weight: 600;
+}
+ 
+.change-color {
+  width: 148px;
+  height: 40px;
+  padding: 8px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  background-color: #4e75ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+ 
+.change-color:hover {
+  background-color: #3a5fd9;
+}
+ 
+/* ===== TASK 6 – BOX CREATOR ===== */
+/* ИЗМЕНЕНО: добавлен внешний контейнер .script */
+.script {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 16px;
+  position: relative;
+  width: 534px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+ 
+/* ИЗМЕНЕНО: добавлены width: 486px, height: 104px, убран margin-bottom */
+#controls {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 32px;
+  width: 486px;
+  height: 104px;
+  background: #f6f6fe;
+  border-radius: 8px;
+}
+ 
+#controls input[type='number'] {
+  width: 150px;
+  height: 40px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  border: 1px solid #808080;
+  border-radius: 8px;
+  outline: none;
+  text-align: center;
+}
+ 
+#controls button[data-create] {
+  width: 120px;
+  height: 40px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  background-color: #4e75ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+ 
+#controls button[data-create]:hover {
+  background-color: #3a5fd9;
+}
+ 
+#controls button[data-destroy] {
+  width: 120px;
+  height: 40px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  background-color: #ff4e4e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+ 
+/* ИЗМЕНЕНО: hover #e03a3a → #ff7070 */
+#controls button[data-destroy]:hover {
+  background-color: #ff7070;
+}
+ 
+/* ИЗМЕНЕНО: убраны flex-wrap и margin-top, добавлены width/height/gap, flex-direction: column */
+#boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 32px;
+  width: 486px;
+  height: 134px;
+  background: #f6f6fe;
+  border-radius: 8px;
+}
+ 
+/* ИЗМЕНЕНО: добавлена обёртка .boxes-row */
+.boxes-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 44px;
+  width: 426px;
+  height: 70px;
+}
+ 
+/* Прямоугольники создаются и стилизуются динамически через JS */
